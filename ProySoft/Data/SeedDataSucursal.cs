@@ -21,9 +21,9 @@ namespace ProySoft.Data
                     new Sucursales
                     {
                         Name = "Sucurnal Lanus",
-                        Calle = "Calle de Sucursal Lanus",
-                        Localidad = "Localidad de Sucursal Lanus",
-                        Provincia = "Provincia de Sucursal Lanus",
+                        Calle = "29 de Septiembre",
+                        Localidad = "Lanus",
+                        Provincia = "Buenos Aires",
                         Email = "lanus@mcdonalds.com",
                         CreateTime = DateTime.Now,
                         IsDeleted = false
@@ -32,9 +32,9 @@ namespace ProySoft.Data
                     new Sucursales
                     {
                         Name = "Sucurnal Ezeiza",
-                        Calle = "Calle de Sucursal Ezeiza",
-                        Localidad = "Localidad de Sucursal Ezeiza",
-                        Provincia = "Provincia de Sucursal Ezeiza",
+                        Calle = "Av. Uriarte",
+                        Localidad = "Ezeiza",
+                        Provincia = "Buenos Aires",
                         Email = "bautiberto@gmail.com",
                         CreateTime = DateTime.Now,
                         IsDeleted = false
@@ -43,9 +43,9 @@ namespace ProySoft.Data
                     new Sucursales
                     {
                         Name = "Sucurnal Lomas",
-                        Calle = "Calle de Sucursal Lomas",
-                        Localidad = "Localidad de Sucursal Lomas",
-                        Provincia = "Provincia de Sucursal Lomas",
+                        Calle = "Malabia",
+                        Localidad = "Lomas",
+                        Provincia = "Buenos Aires",
                         Email = "lomas@mcdonalds.com",
                         IsDeleted = false
                     }

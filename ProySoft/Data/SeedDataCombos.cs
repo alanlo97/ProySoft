@@ -22,7 +22,7 @@ namespace ProySoft.Data
                     {
                         Name = "Combo Big Mac",
                         CreateTime = DateTime.Now,
-                        Imagen = "Combo Big Mac Imagen",
+                        Imagen = "664c57bd-7787-4c2e-8d0b-4a053d755a92-big mac combo.jpg",
                         IsDeleted = false,
                         Price = 22.22
                     },
@@ -31,7 +31,7 @@ namespace ProySoft.Data
                     {
                         Name = "Combo McNifica",
                         CreateTime = DateTime.Now,
-                        Imagen = "Combo McNifica Imagen",
+                        Imagen = "ab728a03-0181-4458-b209-e71c04dc1d85-combo-mcnifica.jpg",
                         IsDeleted = false,
                         Price = 28.2
                     },
@@ -40,7 +40,7 @@ namespace ProySoft.Data
                     {
                         Name = "Combo McFiesta",
                         CreateTime = DateTime.Now,
-                        Imagen = "Combo McFiesta Imagen",
+                        Imagen = "7c32bfa6-80ad-4fde-b567-7ac1dc585052-combo-mcfiesta.jpg",
                         IsDeleted = false,
                         Price = 30.5
                     }
