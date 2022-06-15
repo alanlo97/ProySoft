@@ -1,0 +1,167 @@
+﻿@model IEnumerable<ProySoft.Models.Burger>
+
+@{
+    ViewData["Title"] = "Productos";
+    Layout = "_LayoutCustom";
+    <script src="~/js/custom.js" asp-append-version="true"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+}
+
+<h1>Productos</h1>
+
+@if (ViewBag.Message != null)
+{
+    <script type="text/javascript">
+        window.onload = function(){
+            alert("@ViewBag.Message")
+        };
+    </script>
+}
+
+<section class="food_section layout_padding">
+    <div class="container">
+        
+        
+        <ul class="filters_menu">
+            <li class="active" data-filter=".all">Todo</li>
+            <li data-filter=".burger">Hamburguesas</li>
+            <li data-filter=".pizza">Bebidas</li>
+            <li data-filter=".pasta">Desayunos</li>
+            <li data-filter=".fries">Postres</li>  
+        </ul>
+        <div class="filters-content">
+            <div class="row grid">
+                    
+                        
+                            @foreach (var item in Model)
+                {
+                    <div class="col-sm-6 col-lg-4 all burger">
+                            @if (@item.IdTipoProducto == 1)
+                    {
+                            <div class="box">
+                                <div>
+                                    <div class="img-box">
+                                        <img src="~/Images/@item.Imagen" asp-append-version="true" alt="" />
+                                    </div>
+                                    <div class="detail-box">
+                                        <h5>
+                                           @Html.DisplayFor(modelItem => item.Name)
+                                        </h5>
+                                        <div class="options">
+                                            <h6>
+                                                $ @Html.DisplayFor(modelItem => item.Price)
+                                            </h6>
+                                            <a asp-action="Details" asp-route-id="@item.Id">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+</svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            }
+                            </div>
+                            }
+                        
+                        
+                            @foreach (var item in Model)
+                {
+                    <div class="col-sm-6 col-lg-4 all pasta">
+                    @if (@item.IdTipoProducto == 2)
+                    {
+                            <div class="box">
+                                <div>
+                                    <div class="img-box">
+                                        <img src="~/Images/@item.Imagen" asp-append-version="true" alt="" />
+                                    </div>
+                                    <div class="detail-box">
+                                        <h5>
+                                            @Html.DisplayFor(modelItem => item.Name)
+                                        </h5>
+                                        <div class="options">
+                                            <h6>
+                                               $ @Html.DisplayFor(modelItem => item.Price)
+                                            </h6>
+                                            <a asp-action="Details" asp-route-id="@item.Id">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+</svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            }
+                             </div>
+                            }
+                       
+                        
+                            @foreach (var item in Model)
+                {
+                    <div class="col-sm-6 col-lg-4 all fries">
+                    @if (@item.IdTipoProducto == 3)
+                    {
+                            <div class="box">
+                                <div>
+                                    <div class="img-box">
+                                        <img src="~/Images/@item.Imagen" asp-append-version="true" alt="" />
+                                    </div>
+                                    <div class="detail-box">
+                                        <h5>
+                                            @Html.DisplayFor(modelItem => item.Name)
+                                        </h5>
+                                        <div class="options">
+                                            <h6>
+                                               $ @Html.DisplayFor(modelItem => item.Price)
+                                            </h6>
+                                            <a asp-action="Details" asp-route-id="@item.Id">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+</svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            }
+                            </div>
+                            }
+                        
+                       
+                            @foreach (var item in Model)
+                {
+                     <div class="col-sm-6 col-lg-4 all pizza">
+                    @if (@item.IdTipoProducto == 4)
+                    {
+                            <div class="box">
+                                <div>
+                                    <div class="img-box">
+                                        <img src="~/Images/@item.Imagen" asp-append-version="true" alt="" />
+                                    </div>
+                                    <div class="detail-box">
+                                        <h5>
+                                            @Html.DisplayFor(modelItem => item.Name)
+                                        </h5>
+                                        <div class="options">
+                                            <h6>
+                                              $  @Html.DisplayFor(modelItem => item.Price)
+                                            </h6>
+                                            <a asp-action="Details" asp-route-id="@item.Id">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+</svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            }
+                              </div>
+                            }
+                      
+            </div>
+        </div>
+    </div>
+</section>
+

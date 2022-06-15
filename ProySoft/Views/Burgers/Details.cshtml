@@ -1,0 +1,45 @@
+﻿@model ProySoft.Models.Burger
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "_LayoutCustom";
+}
+
+<h1>Details</h1>
+
+
+   <section class="food_section layout_padding">
+    <div class="container">
+    <div class="filters-content">
+        <div class="row grid">
+          <div class="col-sm-6 col-lg-4 all pizza">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="~/Images/@Model.Imagen" asp-append-version="true" alt=""/>
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    @Html.DisplayFor(modelItem => @Model.Name)
+                  </h5>
+                  <p>
+                    @Html.DisplayFor(modelItem => @Model.Ingredientes)
+                  </p>
+                  <div class="options">
+                    <h6>
+                      $ @Html.DisplayFor(modelItem => @Model.Price)
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+    </div>
+    </div>
+</section>
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,109 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+    Layout = "_LayoutCustom";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<!--div class="row">
+    <div class="col-md-4">
+        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+            <h2>Create a new account.</h2>
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-floating">
+                <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
+                <label asp-for="Input.Email"></label>
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="Input.Name" class="form-control" autocomplete="name" aria-required="true" />
+                <label asp-for="Input.Name"></label>
+                <span asp-validation-for="Input.Name" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="Input.Dni" class="form-control" autocomplete="dni" aria-required="true" />
+                <label asp-for="Input.Dni"></label>
+                <span asp-validation-for="Input.Dni" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" />
+                <label asp-for="Input.Password"></label>
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" />
+                <label asp-for="Input.ConfirmPassword"></label>
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div>
+            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+        </form>
+    </div>
+    <div class="col-md-6 col-md-offset-2">
+        
+    </div>
+</!--div-->
+
+<section class="vh-100 bg-image" style="background-image: url('https://s1.best-wallpaper.net/wallpaper/m/2009/Mcdonalds-logo_m.webp');">
+  <div class="mask d-flex align-items-center h-100">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+
+              <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-floating mb-4">
+                  <input asp-for="Input.Name" id="form3Example1cg" class="form-control form-control-lg" autocomplete="name" aria-required="true"/>
+                  <label asp-for="Input.Name" class="form-label" for="form3Example1cg">Your Name</label>
+                  <span asp-validation-for="Input.Name" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating mb-4">
+                  <input asp-for="Input.Email" id="form3Example3cg" class="form-control form-control-lg" autocomplete="username" aria-required="true"/>
+                  <label asp-for="Input.Email" class="form-label" for="form3Example3cg">Your Email</label>
+                  <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating mb-4">
+                  <input asp-for="Input.Dni" id="form3Example3cg" class="form-control form-control-lg" autocomplete="dni" aria-required="true"/>
+                  <label asp-for="Input.Dni" class="form-label" for="form3Example3cg">Your Dni</label>
+                  <span asp-validation-for="Input.Dni" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating mb-4">
+                  <input asp-for="Input.Password" id="form3Example3cg" class="form-control form-control-lg" autocomplete="new-password" aria-required="true"/>
+                  <label asp-for="Input.Password" class="form-label" for="form3Example3cg">Password</label>
+                  <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating mb-4">
+                  <input asp-for="Input.ConfirmPassword" id="form3Example3cg" class="form-control form-control-lg" autocomplete="new-password" aria-required="true"/>
+                  <label asp-for="Input.ConfirmPassword" class="form-label" for="form3Example3cg">Repeat Password</label>
+                  <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                  <button id="registerSubmit" type="submit"
+                    class="btn bg-warning btn-block btn-lg text-body">Register</button>
+                </div>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
